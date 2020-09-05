@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to right,rgba(255, 166, 0, 0.5), rgba(255, 255, 0, 0.3));
+    margin: 50px 0;
+    padding: 0;
+}
+
+div.calc div.dislpays {
+    background-color: rgb(75, 75, 75);
+    color: rgb(150, 150, 150);
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+div.calc div.dislpays div.history {
+    height: 50px;
+    width: 50px;
+    border: 2px solid rgb(220, 220, 220);
+    color: rgb(220, 220, 220);
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+div.calc div.dislpays div.history:hover {
+    background-color: rgb(100, 100, 100);
+    font-size: 2.2rem;
+}
+
+div.calc div.dislpays div.previous {
+    height: 60px;
+    width: 300px;
+    padding: 20px;
+    text-align: right;
+}
+
+div.calc div.current {
+    background-color: rgb(75, 75, 75);
+    color: rgb(225, 225, 225);
+    height: 60px;
+    width: 360px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 2rem;
+}
+
+div.calc div.buttons {
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.calc div.buttons button {
+    background-color: rgb(250, 115, 115);
+    border: 1px solid white;
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+}
+
+div.calc div.buttons button:hover {
+    background-color:rgb(220, 100, 100);
+    font-size: 2.4rem;
+}
+
+div.calc div.buttons button.double {
+    width: 200px;
+}
+
+div.calc div.historyContent {
+    display: block;
+    top: 0;
+    background-color: rgb(75, 75, 75);
+    border: 1px solid rgb(220, 220, 220);
+    color: rgb(220, 220, 220);
+    width: 360px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+div.calc div.hide {
+   display: none;
+}
