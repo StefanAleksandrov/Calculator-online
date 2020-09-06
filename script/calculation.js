@@ -95,7 +95,7 @@ historyButton.addEventListener("click", function (event) {
 bodyDiv.addEventListener("keydown", function (event) {
     const symbolCodes = ['Numpad0', 'Numpad1', 'Numpad2', 'Numpad3', 'Numpad4', 'Numpad5', 'Numpad6', 'Numpad7', 'Numpad8', 'Numpad9', 'NumpadDecimal',
         'Digit0', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6', 'Digit7', 'Digit8', 'Digit9', 'Comma', 'Period'];
-    const operandsCodes = ['NumpadAdd', 'NumpadSubstract', 'NumpadMultiply', 'NumpadDivide'];
+    const operandsCodes = ['NumpadAdd', 'NumpadSubtract', 'NumpadMultiply', 'NumpadDivide'];
     const calculationStart = ['NumpadEnter', 'Enter', 'Space'];
 
     if (symbolCodes.includes(event.code)) {
@@ -116,12 +116,12 @@ bodyDiv.addEventListener("keydown", function (event) {
         }
         let currNumber = displayCurrent.textContent;
         displayCurrent.textContent += calc.appendCurrent(currSymbol, currNumber);
-    } else if (operandsCodes.includes(event.code) && displayCurrent.textContent.length > 0) {
+    } else if (operandsCodes.includes(event.code)) {
         switch (event.code) {
             case 'NumpadAdd':
                 currSymbol = '+';
                 break;
-            case 'NumpadSubstract':
+            case 'NumpadSubtract':
                 currSymbol = '-';
                 break;
             case 'NumpadMultiply':
@@ -149,7 +149,7 @@ bodyDiv.addEventListener("keydown", function (event) {
         currSymbol = String(displayPrevious.textContent).substring(displayPrevious.textContent.length - 1);
         let currNumber = displayCurrent.textContent;
         let previousNumber = displayPrevious.textContent;
-    
+
         if (displayPrevious.textContent.includes("=")) {
             return;
         }
@@ -158,4 +158,4 @@ bodyDiv.addEventListener("keydown", function (event) {
             displayCurrent.textContent = calc.calculation(currSymbol, currNumber, previousNumber);
         }
     }
-})
+});
